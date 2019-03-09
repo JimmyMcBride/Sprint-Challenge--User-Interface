@@ -115,6 +115,26 @@ nav a:hover {
     padding: 0 1%;
     padding-bottom: 20px;
 }
+/* about section */
+.about-section {
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.content-box {
+    width: 370px;
+    margin: 20px 0;
+    border-bottom: 1px dashed black;
+    padding: 20px 0;
+}
 
 .middle-content {
     margin-bottom: 20px;
