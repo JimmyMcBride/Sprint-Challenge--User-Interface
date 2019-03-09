@@ -66,12 +66,13 @@ p {
     line-height: 1.4;
 }
 
+/* site container */
 .container {
     width: 800px;
     margin: 0 auto;
 }
 
-/* header and navbar */
+/* site header and navbar */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -101,7 +102,19 @@ nav a:hover {
 .logo {
     margin: 5px 0;
 }
-/* home page */
+
+/* header and navbar animations */
+header nav, .logo {
+    animation-name: navbarfade;
+    animation-duration: 5s;
+}
+
+@keyframes navbarfade {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+/* home page top content */
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -115,7 +128,7 @@ nav a:hover {
     padding: 0 1%;
     padding-bottom: 20px;
 }
-/* about section */
+/* about section content */
 .about-section {
     width: 95%;
     margin-bottom: 20px;
@@ -136,6 +149,7 @@ nav a:hover {
     padding: 20px 0;
 }
 
+/* home page middle content */
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -162,7 +176,7 @@ nav a:hover {
     justify-content: center;
 }
 
-/* box colors */
+/* hope page box colors */
 .box:first-child {
     background: teal;
 }
@@ -217,6 +231,7 @@ nav a:hover {
     padding-right: 0;
 }
 
+/* site footer */
 footer {
     width: 100%;
     background: black;
