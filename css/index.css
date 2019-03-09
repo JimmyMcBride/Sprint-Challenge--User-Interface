@@ -125,6 +125,20 @@ header nav a:hover {
     100% {color: #888;}
 }
 
+.header-img {
+    animation-name: imgslide;
+    animation-duration: 2s;
+}
+
+@keyframes imgslide {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
 /* home page top content */
 .top-content {
     display: flex;
