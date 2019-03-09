@@ -193,7 +193,7 @@ button:hover {
 .top-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
 }
@@ -204,7 +204,7 @@ button:hover {
     padding-bottom: 20px;
 }
 /* about section content */
-.about-section {
+.about-section, .blog-section {
     width: 95%;
     margin-bottom: 20px;
 }
@@ -265,6 +265,20 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* blog preview section */
+.blog-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-bottom: 20px
+}
+
+.blog-prev {
+    width: 225px;
+    margin: 5px;
 }
 
 /* hope page box colors */
