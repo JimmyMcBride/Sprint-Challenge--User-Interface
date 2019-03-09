@@ -103,7 +103,7 @@ nav a:hover {
     margin: 5px 0;
 }
 
-/* header and navbar animations */
+/* header and hover animations */
 header nav, .logo {
     animation-name: navbarfade;
     animation-duration: 5s;
@@ -139,6 +139,20 @@ header nav a:hover {
     }
 }
 
+button:hover {
+    animation-name: button;
+    animation-duration: .75s;
+}
+
+@keyframes button {
+    0% {color: #888;}
+    0% {border-color: #888;}
+    0% {background-color: white;}
+    100% {color: #222;}
+    100% {border-color: #999;}
+    100% {background-color: whitesmoke;}
+}
+
 /* home page top content */
 .top-content {
     display: flex;
@@ -172,6 +186,22 @@ header nav a:hover {
     margin: 20px 0;
     border-bottom: 1px dashed black;
     padding: 20px 0;
+}
+
+button {
+    background: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    border: 2px outset #888;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: #222;
+    border: 2px inset #999;
+    background: whitesmoke;
 }
 
 /* home page middle content */
