@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -66,25 +66,181 @@ p {
     line-height: 1.4;
 }
 
-.container {
-    width: 800px;
-    margin: 0 auto;
+/* media queries */
+@media only screen and (min-width: 800px) {
+    .container {
+        width: 800px;
+        margin: 0 auto;
+    }
 }
 
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .header-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+    }
+    header nav a {
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 18px;
+        text-align: center
+    }
+}
+
+
+
+/* site header and navbar */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+header nav {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+}
+
+nav a:hover {
+    color: #888;
+}
+
+.logo {
+    margin: 5px 0;
+    height: 40px;
+    width: 157px;
+}
+
+/* header and hover animations */
+header nav, .logo {
+    animation-name: navbarfade;
+    animation-duration: 5s;
+}
+
+@keyframes navbarfade {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+header nav a:hover {
+    animation-name: navhover;
+    animation-duration: .5s;
+}
+
+@keyframes navhover {
+    0% {color: #555;}
+    50% {color: whitesmoke;}
+    100% {color: #888;}
+}
+
+.header-img {
+    animation-name: imgslide;
+    animation-duration: 2s;
+}
+
+@keyframes imgslide {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+button:hover {
+    animation-name: button;
+    animation-duration: .75s;
+}
+
+@keyframes button {
+    0% {color: #888;}
+    0% {border-color: #888;}
+    0% {background-color: white;}
+    100% {color: #222;}
+    100% {border-color: #999;}
+    100% {background-color: whitesmoke;}
+}
+
+/* home page top content */
 .top-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
 }
 
 .top-content .text-container {
-    width: 48%;
+    width: 384px;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
+}
+/* about section content */
+.about-section, .blog-section {
+    width: 95%;
+    margin-bottom: 20px;
 }
 
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.content-box {
+    width: 370px;
+    margin: 20px 0;
+    border-bottom: 1px dashed black;
+    padding: 20px 0;
+}
+
+button {
+    background: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    border: 2px outset #888;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: #222;
+    border: 2px inset #999;
+    background: whitesmoke;
+}
+
+/* home page middle content */
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -102,14 +258,68 @@ p {
 }
 
 .middle-content .boxes .box {
-    width: 12.5%;
+    width: 100px;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* blog preview section */
+.blog-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-bottom: 20px
+}
+
+.blog-prev {
+    width: 225px;
+    margin: 5px;
+}
+
+/* hope page box colors */
+.box:first-child {
+    background: teal;
+}
+
+.box:nth-child(2) {
+    background: gold;
+}
+
+.box:nth-child(3) {
+    background: cadetblue;
+}
+
+.box:nth-child(4) {
+    background: coral;
+}
+
+.box:nth-child(5) {
+    background: crimson;
+}
+
+.box:nth-child(6) {
+    background: forestgreen;
+}
+
+.box:nth-child(7) {
+    background: darkorchid;
+}
+
+.box:nth-child(8) {
+    background: hotpink;
+}
+
+.box:nth-child(9) {
+    background: indigo;
+}
+
+.box:last-child {
+    background: dodgerblue;
 }
 
 .bottom-content {
@@ -126,6 +336,7 @@ p {
     padding-right: 0;
 }
 
+/* site footer */
 footer {
     width: 100%;
     background: black;
